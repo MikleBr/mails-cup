@@ -1,0 +1,67 @@
+.item {
+  padding: 8px;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  color: var(--text-sidebar-color);
+  background: #f6f7f800;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: var(--secondary-hover-color);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+
+    user-select: none;
+
+    svg {
+      path {
+        fill: var(--text-sidebar-color);
+      }
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .count {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  transition: all 0.2s ease;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.active {
+    font-weight: 700;
+    background: var(--selected-color);
+
+    &:active {
+      transform: none;
+    }
+
+    &:hover {
+      background: var(--selected-color);
+    }
+  }
+}
